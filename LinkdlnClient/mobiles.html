@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile flow</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .Main {
+        height: 100vh;
+      }
+      .subOne {
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .subTwo {
+        height: 45%;
+      }
+      .subOne {
+        width: 95%;
+        margin: 0 auto;
+      }
+      .twoChildOne {
+        width: 95%;
+        margin: 0 auto;
+        height: 20%;
+        display: flex;
+        align-items: center;
+      }
+      .oneChildOne {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        height: 15%;
+        align-items: flex-end;
+        border-bottom: 2px solid #757575;
+        padding-bottom: 8px;
+      }
+
+      .oneChildOne h1,
+      .subTwo h1 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.18px;
+        margin-top: 0;
+      }
+      .oneChildOne h2 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.18px;
+        color: #000000;
+        margin-top: 0;
+      }
+
+      .oneChildTwo {
+        width: 90%;
+        margin: 0 auto;
+        height: 70%;
+      }
+
+      .twoChildTwo {
+        background-color: #f9f9f9;
+        width: 100%;
+        min-height: 80%;
+        max-height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .twoChildTwoAnotherChild {
+        width: 93%;
+        padding: 20px;
+        min-height: 10%;
+        max-height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .desMain {
+        display: flex;
+        justify-content: space-around;
+        width: 260px;
+        padding-top: 20px;
+      }
+      .counting {
+        width: 40px;
+        height: 40px;
+        background: #00eecf;
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+      }
+      .written {
+        width: 206px;
+        height: 120px;
+        left: 114px;
+        top: 619px;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3e3639;
+      }
+      .barParents {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: #f9f9f9;
+      }
+      .bar {
+        height: 2px;
+        background-color: #757575;
+        width: 95%;
+        margin-bottom: 50px;
+      }
+      .modalONE {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modalONE-contentONE {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        min-height: 500px;
+        max-height: auto;
+      }
+
+      .closeONE {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .modalTWO {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modalTWO-contentTWO {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        min-height: 500px;
+        max-height: auto;
+      }
+
+      .closeTWO {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .firstModalImagesMain {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .modalonecontantimg {
+        width: 84.56px;
+        height: 152.43px;
+        padding: 15px;
+        margin: 15px;
+        cursor: pointer;
+      }
+      .modalonecontantimg img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Main">
+      <div class="subOne">
+        <div class="oneChildOne">
+          <h1 onclick="openModalONE()">Mobile Workflow</h1>
+          <h2 onclick="openModalTWO()">Project Name v0.0.0</h2>
+        </div>
+        <div class="oneChildTwo">
+          <div class="mainforphotos">
+            <!-- //main -->
+          </div>
+        </div>
+      </div>
+      <div class="subTwo">
+        <div class="twoChildOne">
+          <h1>User Story/Journey Details</h1>
+        </div>
+        <div class="twoChildTwo">
+          <div class="twoChildTwoAnotherChild">
+            <!-- DYNAMIC -->
+            <div class="desMain">
+              <div class="counting">1</div>
+              <div class="written">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+                ad minim veniam, quis nostrud exercitation. Culpa qui officia
+                deserunt mollit anim.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="barParents">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <div id="myModalONE" class="modalONE">
+      <div class="modalONE-contentONE">
+        <span class="closeONE" onclick="closeModalONE()">&times;</span>
+        <div class="firstModalImagesMain">
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m1.png"
+              onclick="modelOneClick(event)"
+              id="m1"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m2.png"
+              onclick="modelOneClick(event)"
+              id="m2"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m3.png"
+              onclick="modelOneClick(event)"
+              id="m3"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m4.png"
+              onclick="modelOneClick(event)"
+              id="m4"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m5.png"
+              onclick="modelOneClick(event)"
+              id="m5"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m6.png"
+              onclick="modelOneClick(event)"
+              id="m6"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m7.png"
+              onclick="modelOneClick(event)"
+              id="m7"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m8.png"
+              onclick="modelOneClick(event)"
+              id="m8"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m9.png"
+              onclick="modelOneClick(event)"
+              id="m9"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m10.png"
+              onclick="modelOneClick(event)"
+              id="m10"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m11.png"
+              onclick="modelOneClick(event)"
+              id="m11"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m12.png"
+              onclick="modelOneClick(event)"
+              id="m12"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m13.png"
+              onclick="modelOneClick(event)"
+              id="m13"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m14.png"
+              onclick="modelOneClick(event)"
+              id="m14"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m15.png"
+              onclick="modelOneClick(event)"
+              id="m15"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m16.png"
+              onclick="modelOneClick(event)"
+              id="m16"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m17.png"
+              onclick="modelOneClick(event)"
+              id="m17"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m18.png"
+              onclick="modelOneClick(event)"
+              id="m18"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m19.png"
+              onclick="modelOneClick(event)"
+              id="m19"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m20.png"
+              onclick="modelOneClick(event)"
+              id="m20"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m21.png"
+              onclick="modelOneClick(event)"
+              id="m21"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m22.png"
+              onclick="modelOneClick(event)"
+              id="m22"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m23.png"
+              onclick="modelOneClick(event)"
+              id="m23"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m24.png"
+              onclick="modelOneClick(event)"
+              id="m24"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m25.png"
+              onclick="modelOneClick(event)"
+              id="m25"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m26.png"
+              onclick="modelOneClick(event)"
+              id="m26"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m27.png"
+              onclick="modelOneClick(event)"
+              id="m27"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m28.png"
+              onclick="modelOneClick(event)"
+              id="m28"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m29.png"
+              onclick="modelOneClick(event)"
+              id="m29"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m30.png"
+              onclick="modelOneClick(event)"
+              id="m30"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m31.png"
+              onclick="modelOneClick(event)"
+              id="m31"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m32.png"
+              onclick="modelOneClick(event)"
+              id="m32"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m33.png"
+              onclick="modelOneClick(event)"
+              id="m33"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m34.png"
+              onclick="modelOneClick(event)"
+              id="m34"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m35.png"
+              onclick="modelOneClick(event)"
+              id="m35"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m36.png"
+              onclick="modelOneClick(event)"
+              id="m36"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m37.png"
+              onclick="modelOneClick(event)"
+              id="m37"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m38.png"
+              onclick="modelOneClick(event)"
+              id="m38"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m39.png"
+              onclick="modelOneClick(event)"
+              id="m39"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m40.png"
+              onclick="modelOneClick(event)"
+              id="m40"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m41.png"
+              onclick="modelOneClick(event)"
+              id="m41"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m42.png"
+              onclick="modelOneClick(event)"
+              id="m42"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m43.png"
+              onclick="modelOneClick(event)"
+              id="m43"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m44.png"
+              onclick="modelOneClick(event)"
+              id="m44"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m45.png"
+              onclick="modelOneClick(event)"
+              id="m45"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m46.png"
+              onclick="modelOneClick(event)"
+              id="m46"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m47.png"
+              onclick="modelOneClick(event)"
+              id="m47"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m48.png"
+              onclick="modelOneClick(event)"
+              id="m48"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m49.png"
+              onclick="modelOneClick(event)"
+              id="m49"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m50.png"
+              onclick="modelOneClick(event)"
+              id="m50"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m51.png"
+              onclick="modelOneClick(event)"
+              id="m51"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m52.png"
+              onclick="modelOneClick(event)"
+              id="m52"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m53.png"
+              onclick="modelOneClick(event)"
+              id="m53"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m54.png"
+              onclick="modelOneClick(event)"
+              id="m54"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m55.png"
+              onclick="modelOneClick(event)"
+              id="m55"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m56.png"
+              onclick="modelOneClick(event)"
+              id="m56"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m57.png"
+              onclick="modelOneClick(event)"
+              id="m57"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m58.png"
+              onclick="modelOneClick(event)"
+              id="m58"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m59.png"
+              onclick="modelOneClick(event)"
+              id="m59"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m60.png"
+              onclick="modelOneClick(event)"
+              id="m60"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m61.png"
+              onclick="modelOneClick(event)"
+              id="m61"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m62.png"
+              onclick="modelOneClick(event)"
+              id="m62"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m63.png"
+              onclick="modelOneClick(event)"
+              id="m63"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m64.png"
+              onclick="modelOneClick(event)"
+              id="m64"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m65.png"
+              onclick="modelOneClick(event)"
+              id="m65"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m66.png"
+              onclick="modelOneClick(event)"
+              id="m66"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m67.png"
+              onclick="modelOneClick(event)"
+              id="m67"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m68.png"
+              onclick="modelOneClick(event)"
+              id="m68"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m69.png"
+              onclick="modelOneClick(event)"
+              id="m69"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m70.png"
+              onclick="modelOneClick(event)"
+              id="m70"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m71.png"
+              onclick="modelOneClick(event)"
+              id="m71"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m72.png"
+              onclick="modelOneClick(event)"
+              id="m72"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m73.png"
+              onclick="modelOneClick(event)"
+              id="m73"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m74.png"
+              onclick="modelOneClick(event)"
+              id="m74"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m75.png"
+              onclick="modelOneClick(event)"
+              id="m75"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m76.png"
+              onclick="modelOneClick(event)"
+              id="m76"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m77.png"
+              onclick="modelOneClick(event)"
+              id="m77"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m78.png"
+              onclick="modelOneClick(event)"
+              id="m78"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m79.png"
+              onclick="modelOneClick(event)"
+              id="m79"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m80.png"
+              onclick="modelOneClick(event)"
+              id="m80"
+              alt="image"
+            />
+          </div>
+          <div class="modalonecontantimg">
+            <img
+              src="/images/mobile/m81.png"
+              onclick="modelOneClick(event)"
+              id="m81"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModalTWO" class="modalTWO">
+      <div class="modalTWO-contentTWO">
+        <span class="closeTWO" onclick="closeModalTWO()">&times;</span>
+        twoChildOne
+      </div>
+    </div>
+
+    <script>
+      //MODAL START
+      const modalONE = document.getElementById("myModalONE");
+      const modalTWO = document.getElementById("myModalTWO");
+      function openModalONE() {
+        modalONE.style.display = "block";
+      }
+      function closeModalONE() {
+        modalONE.style.display = "none";
+      }
+      function openModalTWO() {
+        modalTWO.style.display = "block";
+      }
+      function closeModalTWO() {
+        modalTWO.style.display = "none";
+      }
+      window.onclick = function (event) {
+        if (event.target == modalTWO) {
+          closeModalTWO();
+        }
+      };
+      window.onclick = function (event) {
+        if (event.target == modalONE) {
+          closeModalONE();
+        }
+      };
+      //MODAL END
+
+      //   for (let index = 1; index <= 81; index++) {
+      //  console.log(`<div class="modalonecontantimg" onclick="modelOneClick()">
+      //         <img src="/images/mobile/m${index}.png" id="m${index}" alt="image"  />
+      //       </div> `)
+      //   }
+
+      function modelOneClick(event) {
+        console.log(event.target.id);
+      }
+    </script>
+  </body>
+</html>

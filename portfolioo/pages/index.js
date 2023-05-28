@@ -8,7 +8,7 @@ const [splash, setSplash] = useState(true);
 useEffect(()=>{
   setTimeout(()=>{
     setSplash(false)
-  },2000)
+  },3000)
 },[])
 
 

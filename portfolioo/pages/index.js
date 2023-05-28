@@ -1,10 +1,23 @@
-import data from "@/data/data"
+import data from "@/data/data";
+import FrontSection from "@/components/FrontSection";
+import { useEffect, useState } from "react";
 
-import FrontSection from "@/components/FrontSection"
 export default function Home() {
-    return (<>
-   <FrontSection />
+  const [splash, setSplash] = useState(true);
+
+  useEffect(() => {}, []);
+
+  return (
+    <>
+      {splash ? (
+        <>
+        
+        </>
+      ) : (
+        <>
+          <FrontSection />
+        </>
+      )}
     </>
-    )
-  }
-  
+  );
+}

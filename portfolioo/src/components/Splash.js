@@ -1,6 +1,8 @@
 import data from "@/data/data";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 const Splash = () => {
+  const [splash, setSplash] = useState(true);
+
   return (
     <>
       <div
@@ -12,9 +14,11 @@ const Splash = () => {
             : "black-theme-splash"
         }
       >
-     
+        <div className="splashMain">
+          <div className="splashName">{data.NAME ? data.NAME : "Shahmeer"}</div>
+        </div>
       </div>
     </>
   );
 };
-export default FrontSection;
+export default Splash;

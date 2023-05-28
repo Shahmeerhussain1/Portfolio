@@ -1,6 +1,6 @@
 const data = {
 
-    THEME : 'black', // There are two themes  BLACK and WHITE which you can choose , put (black or white) which you like for your page    !! NOTE just black or white in string no HEX-CODE !!
+    THEME : 'white', // There are two themes  BLACK and WHITE which you can choose , put (black or white) which you like for your page    !! NOTE just black or white in string no HEX-CODE !!
 
     NAME : "shahmeer", //Your Name here
 

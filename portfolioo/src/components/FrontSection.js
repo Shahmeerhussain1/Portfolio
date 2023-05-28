@@ -1,4 +1,5 @@
 import data from "@/data/data";
+import { useState , useEffect } from "react";
 const FrontSection = () => {
   console.log(
     "data",
@@ -7,6 +8,11 @@ const FrontSection = () => {
       ? `${data.THEME}-theme`
       : "black-theme"
   );
+
+
+
+
+  
   return (
     <>
       <div
@@ -19,6 +25,11 @@ const FrontSection = () => {
         }
       >
         <div className="frontMain">
+          <div className="backgroundHeadingfront">
+            <p>
+            {data.BACKGROUND_HEADING ? data.BACKGROUND_HEADING : 'MERN STACK'}
+            </p>
+          </div>
 
 
           <div className="frontPagethreenameMain">
@@ -26,6 +37,8 @@ const FrontSection = () => {
             <div className="mainName">{data.NAME ? data.NAME : "Shahmeer"}</div>
             <div className="mainRole">{`a ${data.ROLE ? data.ROLE : "a developer"}`}</div>
           </div>
+         
+          
         </div>
       </div>
     </>

@@ -1,11 +1,24 @@
 @font-face {
   font-family: "playfair";
-  src: url(../Fonts//playfair/PlayfairDisplay-Bold.ttf);
+  src: url(../Fonts/playfair/PlayfairDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: "bebas";
+  src: url(../Fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "josefin_sans";
+  src: url(../Fonts/Josefin_Sans/JosefinSans-Bold.ttf);
 }
 
 * {
   margin: 0 auto;
 }
+*::selection {
+  color: #ffcf2b;
+  background: #262626;
+}
+
 #black-theme-frontPage {
   .frontMain {
     background-color: #000000 !important;
@@ -25,10 +38,107 @@
     text-align: center;
     color: #ffffff;
   }
-  .mainName::first-letter{
+  .mainName::first-letter {
     text-transform: capitalize;
   }
+  .mainGreeting {
+    font-family: "bebas";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: left;
+    color: #ffffff;
+  }
+  .mainRole {
+    font-family: "bebas";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: right;
+    color: #ffffff;
+  }
+  .backgroundHeadingfront {
+    position: absolute;
+    text-transform: uppercase !important;
+    font-size: 2000%;
+    color: #1f1f1f;
+    font-weight: 900;
+    top: 0;
+    opacity: 0.5;
+    left: 0;
+    height: 70vh;
+    margin-bottom: -70vh;
+    font-family: "josefin_sans";
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .frontPagethreenameMain {
+    z-index: 1;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .backgroundHeadingfront {
+      font-size: 1800%;
+    }
+  }
+  @media only screen and (max-width: 924px) {
+    .backgroundHeadingfront {
+      font-size: 1600%;
+    }
+  }
+  @media only screen and (max-width: 824px) {
+    .backgroundHeadingfront {
+      font-size: 1400%;
+    }
+  }
+  @media only screen and (max-width: 724px) {
+    .backgroundHeadingfront {
+      font-size: 1200%;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .backgroundHeadingfront {
+      font-size: 1000%;
+    }
+    .mainName {
+      font-size: 80px;
+      line-height: 75px;
+    }
+    .mainGreeting {
+      font-size: 30px;
+    }
+    .mainRole {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .backgroundHeadingfront {
+      font-size: 900%;
+    }
+    .mainName {
+      font-size: 70px;
+      line-height: 55px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .backgroundHeadingfront {
+      font-size: 680%;
+    }
+    .mainName {
+      font-size: 60px;
+      line-height: 45px;
+    }
+  }
 }
+
 #white-theme-frontPage {
   .frontMain {
     background-color: #ffffff;
@@ -38,5 +148,117 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .mainName {
+    font-family: "playfair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 160px;
+    text-align: center;
+    color: #000000;
+    // transform: translate(-50%, -50%);
+  }
+  .mainName::first-letter {
+    text-transform: capitalize;
+  }
+  .mainGreeting {
+    font-family: "bebas";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: left;
+    color: #000000;
+    // transform: translate(-50%, -50%);
+  }
+  .mainRole {
+    font-family: "bebas";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: right;
+    color: #000000;
+    // transform: translate(-50%, -50%);
+  }
+  .backgroundHeadingfront {
+    position: absolute;
+    text-transform: uppercase !important;
+    font-size: 2000%;
+    color: #f1f1f1;
+    font-weight: 900;
+    top: 0;
+    opacity: 0.5;
+    left: 0;
+    height: 70vh;
+    margin-bottom: -70vh;
+    font-family: "josefin_sans";
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .frontPagethreenameMain {
+    z-index: 1;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .backgroundHeadingfront {
+      font-size: 1800%;
+    }
+  }
+  @media only screen and (max-width: 924px) {
+    .backgroundHeadingfront {
+      font-size: 1600%;
+    }
+  }
+  @media only screen and (max-width: 824px) {
+    .backgroundHeadingfront {
+      font-size: 1400%;
+    }
+  }
+  @media only screen and (max-width: 724px) {
+    .backgroundHeadingfront {
+      font-size: 1200%;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .backgroundHeadingfront {
+      font-size: 1000%;
+    }
+    .mainName {
+      font-size: 80px;
+      line-height: 75px;
+    }
+    .mainGreeting {
+      font-size: 30px;
+    }
+    .mainRole {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .backgroundHeadingfront {
+      font-size: 900%;
+    }
+    .mainName {
+      font-size: 70px;
+      line-height: 55px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .backgroundHeadingfront {
+      font-size: 680%;
+    }
+    .mainName {
+      font-size: 60px;
+      line-height: 45px;
+    }
   }
 }

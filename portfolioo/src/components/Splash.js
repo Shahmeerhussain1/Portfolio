@@ -15,7 +15,7 @@ const Splash = () => {
         }
       >
         <div className="splashMain">
-          <div className="splashName">{data.NAME ? data.NAME : "Shahmeer"}</div>
+          <div className="splashName"><p>{data.NAME ? data.NAME : "Shahmeer"}</p></div>
         </div>
       </div>
     </>

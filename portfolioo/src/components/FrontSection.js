@@ -37,6 +37,13 @@ const FrontSection = () => {
             <div className="mainName">{data.NAME ? data.NAME : "Shahmeer"}</div>
             <div className="mainRole">{`a ${data.ROLE ? data.ROLE : "a developer"}`}</div>
           </div>
+          <a className="main__mouse"></a>
+          <div class="connect__marker">
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+                <div class="connect__circle"></div>
+              </div>
          
           
         </div>

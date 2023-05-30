@@ -14,16 +14,16 @@ useEffect(()=>{
 
   return (
     <>
-      {splash ? (
+      {/* {splash ? (
         <>
         <Splash/>
         
         </>
-      ) : (
+      ) : ( */}
         <>
           <FrontSection />
         </>
-      )}
+      {/* )} */}
     </>
   );
 }

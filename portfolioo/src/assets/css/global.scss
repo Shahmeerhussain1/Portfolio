@@ -7,6 +7,10 @@
 
 * {
   margin: 0 auto;
+  scroll-behavior :calc(2sec);
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 *::selection {
   color: #ffcf2b;

@@ -22,6 +22,10 @@
   font-family: 'MajorMonoDisplay';
   src: url(../Fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf);
 }
+@font-face {
+  font-family: 'Manrope';
+  src: url(../Fonts/Manrope/Manrope-VariableFont_wght.ttf);
+}
 
 #black-theme-frontPage {
   .frontMain {
@@ -32,6 +36,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #nav-elements {
+    position: absolute;
+    top: 70px;
+    left: -35px;
+    color: #92929294;
+    // color: rgba(146, 146, 146, 0.51);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    transform: rotate(270deg);
   }
   .mainName {
     text-align: center;
@@ -402,6 +421,11 @@
     .mainRole {
       font-size: 30px;
     }
+    #nav-elements {
+      top: 52px;
+      left: -24px;
+      font-size: 16px;
+    }
   }
   @media only screen and (max-width: 450px) {
     .backgroundHeadingfront {
@@ -414,6 +438,9 @@
     .mainGreeting {
       font-size: 15px;
       margin-bottom: 15px;
+    }
+    #nav-elements {
+      font-size: 14px;
     }
   }
   @media only screen and (max-width: 450px) {

@@ -22,6 +22,7 @@ const FrontSection = () => {
               {data.BACKGROUND_HEADING ? data.BACKGROUND_HEADING : 'MERN STACK'}
             </p>
           </div> */}
+          <nav id='nav-elements'>Greetings</nav>
 
           <div className='frontPagethreenameMain'>
             <div className='mainGreeting'>Welcome to the digital realm of</div>

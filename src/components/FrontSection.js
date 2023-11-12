@@ -17,16 +17,16 @@ const FrontSection = () => {
         }
       >
         <div className='frontMain'>
-          <div className='backgroundHeadingfront'>
+          {/* <div className='backgroundHeadingfront'>
             <p>
               {data.BACKGROUND_HEADING ? data.BACKGROUND_HEADING : 'MERN STACK'}
             </p>
-          </div>
+          </div> */}
 
           <div className='frontPagethreenameMain'>
-            {/* <div className='mainGreeting'>Hi, i am</div> */}
+            <div className='mainGreeting'>Welcome to the digital realm of</div>
             <div className='mainName'>
-              {data.NAME ? data.NAME : 'Shahmeer Hussain'}
+              {data.NAME ? data.NAME : 'SHAH MEER'}
             </div>
             {/* <div className='mainRole'>{`a ${
               data.ROLE ? data.ROLE : 'a developer'

@@ -9,19 +9,20 @@ const FrontSection = () => {
     <>
       <div
         id={
-          data.THEME &&
-          (data.THEME.toLocaleLowerCase() == 'black' ||
-            data.THEME.toLocaleLowerCase() == 'white')
-            ? `${data.THEME}-theme-frontPage`
-            : 'black-theme-frontPage'
+          // data.THEME &&
+          // (data.THEME.toLocaleLowerCase() == 'black' ||
+          //   data.THEME.toLocaleLowerCase() == 'white')
+          //   ? `${data.THEME}-theme-frontPage`
+          //   :
+          'black-theme-frontPage'
         }
       >
         <div className='frontMain'>
-          {/* <div className='backgroundHeadingfront'>
+          <div className='backgroundHeadingfront'>
             <p>
               {data.BACKGROUND_HEADING ? data.BACKGROUND_HEADING : 'MERN STACK'}
             </p>
-          </div> */}
+          </div>
           <nav id='nav-elements'>Greetings</nav>
 
           <div className='frontPagethreenameMain'>
@@ -33,12 +34,23 @@ const FrontSection = () => {
               data.ROLE ? data.ROLE : 'a developer'
             }`}</div> */}
           </div>
-          <a className='main__mouse'></a>
           <div class='connect__marker'>
             <div class='connect__circle'></div>
             <div class='connect__circle'></div>
             <div class='connect__circle'></div>
             <div class='connect__circle'></div>
+          </div>
+          {/* <a className='main__mouse'></a> */}
+          <div className='GationBar'>
+            <div>
+              Projects
+            </div>
+            <div>
+              Experience
+            </div>
+            <div>
+              Contact Me
+            </div>
           </div>
         </div>
       </div>

@@ -2,26 +2,32 @@
   font-family: 'playfair';
   src: url(../Fonts/playfair/PlayfairDisplay-Bold.ttf);
 }
+
 @font-face {
   font-family: 'bebas';
   src: url(../Fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
+
 @font-face {
   font-family: 'josefin_sans';
   src: url(../Fonts/Josefin_Sans/JosefinSans-Bold.ttf);
 }
+
 @font-face {
   font-family: 'RobotoMono';
   src: url(../Fonts/RobotoMono/RobotoMono-SemiBold.ttf);
 }
+
 @font-face {
   font-family: 'Anton';
   src: url(../Fonts/Anton/Anton-Regular.ttf);
 }
+
 @font-face {
   font-family: 'MajorMonoDisplay';
   src: url(../Fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf);
 }
+
 @font-face {
   font-family: 'Manrope';
   src: url(../Fonts/Manrope/Manrope-VariableFont_wght.ttf);
@@ -37,6 +43,7 @@
     justify-content: center;
     align-items: center;
   }
+
   #nav-elements {
     position: absolute;
     top: 70px;
@@ -52,6 +59,7 @@
     text-transform: uppercase;
     transform: rotate(270deg);
   }
+
   .mainName {
     text-align: center;
     text-transform: capitalize !important;
@@ -84,10 +92,12 @@
     0% {
       transform: translateX(-500px);
     }
+
     100% {
       transform: translateX(0px);
     }
   }
+
   .mainRole {
     font-family: 'bebas';
     font-style: normal;
@@ -104,10 +114,12 @@
     0% {
       transform: translateX(500px);
     }
+
     100% {
       transform: translateX(0px);
     }
   }
+
   .backgroundHeadingfront {
     position: absolute;
     text-transform: uppercase !important;
@@ -135,10 +147,12 @@
     0% {
       top: 200px;
     }
+
     100% {
       top: 0;
     }
   }
+
   .frontPagethreenameMain,
   .main__mouse {
     z-index: 1;
@@ -146,7 +160,7 @@
 
   .connect__marker {
     position: absolute;
-    top: 221px;
+    top: 150px;
     right: 212px;
     z-index: 2;
     width: 48px;
@@ -172,21 +186,15 @@
     position: absolute;
     top: -160px;
     border-radius: 50%;
-    background-image: -webkit-radial-gradient(
-      50% 99%,
-      rgba(255, 255, 255, 0) 51%,
-      rgba(255, 255, 255, 0.3) 99%
-    );
-    background-image: -o-radial-gradient(
-      50% 99%,
-      rgba(255, 255, 255, 0) 51%,
-      rgba(255, 255, 255, 0.3) 99%
-    );
-    background-image: radial-gradient(
-      50% 99%,
-      rgba(255, 255, 255, 0) 51%,
-      rgba(255, 255, 255, 0.3) 99%
-    );
+    background-image: -webkit-radial-gradient(50% 99%,
+        rgba(255, 255, 255, 0) 51%,
+        rgba(255, 255, 255, 0.3) 99%);
+    background-image: -o-radial-gradient(50% 99%,
+        rgba(255, 255, 255, 0) 51%,
+        rgba(255, 255, 255, 0.3) 99%);
+    background-image: radial-gradient(50% 99%,
+        rgba(255, 255, 255, 0) 51%,
+        rgba(255, 255, 255, 0.3) 99%);
     -webkit-animation: circle1 1s forwards;
     animation: circle1 1s forwards;
     opacity: 0;
@@ -225,12 +233,15 @@
       transform: translateX(20%) rotate(20deg);
       opacity: 0;
     }
+
     30% {
       opacity: 0.7;
     }
+
     70% {
       opacity: 1;
     }
+
     100% {
       -webkit-transform: translateX(0) rotate(0);
       transform: translateX(0) rotate(0);
@@ -244,12 +255,15 @@
       transform: translateX(20%) rotate(20deg);
       opacity: 0;
     }
+
     30% {
       opacity: 0.7;
     }
+
     70% {
       opacity: 1;
     }
+
     100% {
       -webkit-transform: translateX(0) rotate(0);
       transform: translateX(0) rotate(0);
@@ -263,6 +277,7 @@
       transform: translate(10%, -20%);
       opacity: 0;
     }
+
     100% {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
@@ -276,6 +291,7 @@
       transform: translate(10%, -20%);
       opacity: 0;
     }
+
     100% {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
@@ -294,6 +310,7 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -303,6 +320,7 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -311,6 +329,54 @@
   .frontMain {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+  }
+
+  .GationBar {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    color: #929292;
+    gap: 10px;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    border: 1px solid #929292;
+    padding: 7px;
+    border-radius: 22px;
+    animation: slideIn 2s ;
+    backdrop-filter: blur(100px);
+  }
+  @keyframes slideIn {
+    from {
+     opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .GationBarOne:focus{
+    opacity: 0;
+  }
+  
+  
+  
+  
+
+  .GationBarOne {
+    padding: 5px 9px;
+    border-radius: 29px;
+  }
+
+  .GationBarOne:hover {
+    background-color: #929292 !important;
+    color: #222222 !important;
+    cursor: pointer;
   }
 
   .main__mouse {
@@ -354,14 +420,17 @@
       -webkit-transform: translate(-50%, 2px);
       transform: translate(-50%, 2px);
     }
+
     50% {
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
     }
+
     75% {
       -webkit-transform: translate(-50%, -2px);
       transform: translate(-50%, -2px);
     }
+
     100% {
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
@@ -373,14 +442,17 @@
       -webkit-transform: translate(-50%, 2px);
       transform: translate(-50%, 2px);
     }
+
     50% {
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
     }
+
     75% {
       -webkit-transform: translate(-50%, -2px);
       transform: translate(-50%, -2px);
     }
+
     100% {
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
@@ -392,61 +464,72 @@
       font-size: 1800%;
     }
   }
+
   @media only screen and (max-width: 924px) {
     .backgroundHeadingfront {
       font-size: 1600%;
     }
   }
+
   @media only screen and (max-width: 824px) {
     .backgroundHeadingfront {
       font-size: 1400%;
     }
   }
+
   @media only screen and (max-width: 724px) {
     .backgroundHeadingfront {
       font-size: 1200%;
     }
   }
+
   @media only screen and (max-width: 650px) {
     .backgroundHeadingfront {
       font-size: 1000%;
     }
+
     .mainName {
       font-size: 80px;
       line-height: 75px;
     }
+
     .mainGreeting {
       font-size: 20px;
     }
+
     .mainRole {
       font-size: 30px;
     }
+
     #nav-elements {
       top: 52px;
       left: -24px;
       font-size: 16px;
     }
   }
+
   @media only screen and (max-width: 450px) {
-    .backgroundHeadingfront {
-      font-size: 900%;
-    }
+
     .mainName {
       font-size: 70px;
       line-height: 55px;
     }
+
     .mainGreeting {
       font-size: 15px;
       margin-bottom: 15px;
     }
+
     #nav-elements {
       font-size: 14px;
     }
   }
+
   @media only screen and (max-width: 450px) {
     .backgroundHeadingfront {
-      font-size: 680%;
+      font-size: 500%;
     }
+
     .mainName {
       font-size: 60px;
       line-height: 45px;
@@ -475,9 +558,11 @@
     color: #000000;
     // transform: translate(-50%, -50%);
   }
+
   .mainName::first-letter {
     text-transform: capitalize;
   }
+
   .mainGreeting {
     font-family: 'bebas';
     font-style: normal;
@@ -488,6 +573,7 @@
     color: #000000;
     margin-bottom: -8px;
   }
+
   .mainRole {
     font-family: 'bebas';
     font-style: normal;
@@ -497,6 +583,7 @@
     text-align: right;
     color: #000000;
   }
+
   .backgroundHeadingfront {
     position: absolute;
     text-transform: uppercase !important;
@@ -518,6 +605,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
   .frontPagethreenameMain {
     z-index: 1;
   }
@@ -533,6 +621,7 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -542,6 +631,7 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -557,49 +647,60 @@
       font-size: 1800%;
     }
   }
+
   @media only screen and (max-width: 924px) {
     .backgroundHeadingfront {
       font-size: 1600%;
     }
   }
+
   @media only screen and (max-width: 824px) {
     .backgroundHeadingfront {
       font-size: 1400%;
     }
   }
+
   @media only screen and (max-width: 724px) {
     .backgroundHeadingfront {
       font-size: 1200%;
     }
   }
+
   @media only screen and (max-width: 650px) {
     .backgroundHeadingfront {
       font-size: 1000%;
     }
+
     .mainName {
       font-size: 80px;
       line-height: 75px;
     }
+
     .mainGreeting {
       font-size: 30px;
     }
+
     .mainRole {
       font-size: 30px;
     }
   }
+
   @media only screen and (max-width: 450px) {
     .backgroundHeadingfront {
       font-size: 900%;
     }
+
     .mainName {
       font-size: 70px;
       line-height: 55px;
     }
   }
+
   @media only screen and (max-width: 450px) {
     .backgroundHeadingfront {
       font-size: 680%;
     }
+
     .mainName {
       font-size: 60px;
       line-height: 45px;

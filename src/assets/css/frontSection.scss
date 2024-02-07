@@ -351,6 +351,10 @@
     animation: slideIn 2s ;
     backdrop-filter: blur(100px);
   }
+  .opa , .AlParentProjects{
+    animation: slideIn 2s ;
+
+  }
   @keyframes slideIn {
     from {
      opacity: 0;
@@ -377,6 +381,15 @@
     background-color: #929292 !important;
     color: #222222 !important;
     cursor: pointer;
+  }
+  .contactI{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 50%;
   }
 
   .main__mouse {

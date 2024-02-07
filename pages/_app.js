@@ -16,11 +16,11 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:description" content="Portfolio of Shah Meer, a MERN stack developer" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://portfolio-nu-pink-58.vercel.app/" />
-                <meta property="og:image" content="https://portfolio-nu-pink-58.vercel.app/SharedScreenshot.png" />
+                <meta property="og:image" content="/SharedScreenshot.png" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Shah Meer's Portfolio" />
                 <meta name="twitter:description" content="Portfolio of Shah Meer, a MERN stack developer" />
-                <meta name="twitter:image" content="https://yourportfolio.com/twitter-image.jpg" />
+                <meta name="twitter:image" content="/SharedScreenshot.png" />
             </Head>
             <Component {...pageProps} />
         </>

@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 const FrontSection = () => {
   let router = useRouter()
   const [hoveredDiv, setHoveredDiv] = useState(null);
-  // const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  //   ssr: false,
-  // });
+  const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+    ssr: false,
+  });
   return (
     <>
       <div
@@ -112,7 +112,7 @@ const FrontSection = () => {
         </div>
       </div>
 
-      {/* <AnimatedCursor
+      <AnimatedCursor
         innerSize={8}
         outerSize={35}
         innerScale={1}
@@ -126,7 +126,7 @@ const FrontSection = () => {
           mixBlendMode: 'exclusion',
           border: '3px solid #929292',
         }}
-      /> */}
+      />
     </>
   );
 };

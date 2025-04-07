@@ -10,7 +10,7 @@ pipeline{
         stage("Build"){
             steps {
                 //sh "docker build -t next-app:latest ."
-                sh "docker compose up --build next-app"
+                sh "docker compose up --build next-app -d"
                 echo "Code Build hogya"
             }
         }

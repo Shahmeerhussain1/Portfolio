@@ -5,7 +5,7 @@ const data = {
 
   ROLE: 'developer', //Your role in industry like developer ,coder , designer or etc...
 
-  BACKGROUND_HEADING: 'mern stack', //Background heading like  mern stack   or   full stack
+  BACKGROUND_HEADING: 'mern stacK', //Background heading like  mern stack   or   full stack
 
   //Synopsis
   //the world of SHAHMEER Hussain

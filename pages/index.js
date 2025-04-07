@@ -43,7 +43,7 @@ const FrontSection = () => {
           <div className='frontPagethreenameMain'>
             <div className='mainGreeting'>Welcome to the digital realm of</div>
             <div className='mainName'>
-              {data.NAME ? data.NAME : "SHAH MEER's"}
+              {data.NAME ? data.NAME : "SHAH MiR"}
             </div>
             
           </div>

@@ -1,0 +1,7 @@
+Services:
+   next-app:
+      build:
+       context : .
+      container_name : next-app
+      ports :
+       - "3000:3000"

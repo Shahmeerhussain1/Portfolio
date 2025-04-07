@@ -1,4 +1,4 @@
-Services:
+services:
    next-app:
       build:
        context : .
